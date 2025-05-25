@@ -51,16 +51,16 @@ const Footer = () => {
           </div>
         </div>
         
-        {/*<div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white mb-4 md:mb-0">
             © {currentYear} Inplast Holding. All rights reserved.
           </p>
           
           <div className="flex space-x-4">
-            <a href="#" className="text-white hover:text-inplast-orange transition-colors">Privacy Policy</a>
-            <a href="#" className="text-white hover:text-inplast-orange transition-colors">Terms of Service</a>
+            <Link to="/privacy-policy" className="text-white hover:text-inplast-orange transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="text-white hover:text-inplast-orange transition-colors">Terms of Service</Link>
           </div>
-        </div>*/}
+        </div>
       </div>
     </footer>
   );
