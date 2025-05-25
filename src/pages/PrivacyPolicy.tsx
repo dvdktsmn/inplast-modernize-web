@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-inplast-blue mb-4">Introduction</h2>
               <p className="text-gray-700 mb-4">
-                Inplast Holding ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                Inplast Novex ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
               </p>
             </section>
 
@@ -91,8 +91,8 @@ const PrivacyPolicy = () => {
                 If you have any questions about this Privacy Policy, please contact us at:
               </p>
               <p className="text-gray-700">
-                Email: privacy@inplast-novex.com<br />
-                Address: Inplast Holding, [Company Address]
+                Email: info@inplast-novex.com<br />
+                Address: 87b M.Sklodowskiej-Curie Street, 87-100 Torun, Poland
               </p>
             </section>
           </div>
