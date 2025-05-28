@@ -456,7 +456,7 @@ const LargeProjectCard = ({ project, reverseLayout = false }: LargeProjectCardPr
                 </CarouselContent>
                 <CarouselPrevious className="left-2 bg-white/80 hover:bg-white border-gray-300 text-gray-700 shadow-lg" />
                 <CarouselNext className="right-2 bg-white/80 hover:bg-white border-gray-300 text-gray-700 shadow-lg" />
-              </CarouselContent>
+              </Carousel>
             </div>
           </div>
         </DialogContent>
