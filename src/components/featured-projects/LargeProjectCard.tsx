@@ -431,7 +431,7 @@ const LargeProjectCard = ({ project, reverseLayout = false }: LargeProjectCardPr
       <Dialog open={lightboxOpen} onOpenChange={setLightboxOpen}>
         <DialogContent className="max-w-[95vw] w-[95vw] h-[90vh] max-h-[90vh] p-0 bg-white border-none overflow-hidden">
           <div className="relative w-full h-full flex flex-col">
-            <div className="flex-1 min-h-0 py-4">
+            <div className="flex-1 min-h-0 py-4 px-2">
               <Carousel 
                 className="w-full h-full" 
                 setApi={setCarouselApi} 
@@ -443,20 +443,20 @@ const LargeProjectCard = ({ project, reverseLayout = false }: LargeProjectCardPr
                 <CarouselContent className="h-full -ml-0">
                   {project.images.map((image, index) => (
                     <CarouselItem key={`lightbox-${index}`} className="h-full pl-0">
-                      <div className="w-full h-full flex items-center justify-center px-2 sm:px-4">
+                      <div className="w-full h-full flex items-center justify-center px-2">
                         <img 
                           src={image} 
                           alt={`${project.title} - large view ${index + 1}`}
                           className="max-w-full max-h-full object-contain rounded-lg shadow-lg"
-                          style={{ maxHeight: 'calc(90vh - 2rem)' }}
+                          style={{ maxHeight: 'calc(90vh - 4rem)', maxWidth: 'calc(95vw - 2rem)' }}
                         />
                       </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="left-2 sm:left-4 bg-white/80 hover:bg-white border-gray-300 text-gray-700 shadow-lg" />
-                <CarouselNext className="right-2 sm:right-4 bg-white/80 hover:bg-white border-gray-300 text-gray-700 shadow-lg" />
-              </Carousel>
+                <CarouselPrevious className="left-2 bg-white/80 hover:bg-white border-gray-300 text-gray-700 shadow-lg" />
+                <CarouselNext className="right-2 bg-white/80 hover:bg-white border-gray-300 text-gray-700 shadow-lg" />
+              </CarouselContent>
             </div>
           </div>
         </DialogContent>
