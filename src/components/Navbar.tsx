@@ -69,14 +69,14 @@ const Navbar = () => {
               }}
               className="text-white hover:text-inplast-orange transition-colors cursor-pointer"
             >
-              Products
+              Expertise
             </a>
           ) : (
           <Link 
             to="/products"
             className="text-white hover:text-inplast-orange transition-colors cursor-pointer"
           >
-            Products
+            Expertise
           </Link>
           )}
           {isHomePage ? (

@@ -113,7 +113,7 @@ const ProductsPage = () => {
       <main className="flex-grow py-20 pt-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-inplast-blue mb-4">Our Product Expertise</h1>
+            <h1 className="text-4xl font-bold text-inplast-blue mb-4">Our Systems and Equipment Expertise</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We have extensive experience with a wide range of industrial equipment and systems. 
               Our technical knowledge allows us to deliver comprehensive solutions for diverse manufacturing needs.
