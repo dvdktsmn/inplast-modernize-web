@@ -21,7 +21,7 @@ const ProductsPage = () => {
     "Electrical Components and Systems": "/lovable-uploads/371c6472-159f-41b3-a97b-4abeff5ccde6.png",
     "Motion Control": "/lovable-uploads/87f7cb49-1a26-4ce0-82e7-5819631a0cd1.png",
     "Automation and Process Control": "/lovable-uploads/d946c718-e590-4932-9e9a-45e34a43ae11.png",
-    "MES Systems": "/placeholder.svg",
+    "MES Systems": "/lovable-uploads/3c0fcfc8-9326-44fd-9d05-ddf910939169.png",
   };
 
   const products: ProductDetail[] = [
