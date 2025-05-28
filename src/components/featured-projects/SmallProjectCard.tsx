@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { FeaturedProject } from './ProjectsData';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
@@ -10,12 +10,20 @@ import {
   CarouselPrevious 
 } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 interface SmallProjectCardProps {
   project: FeaturedProject;
 }
 
 const SmallProjectCard = ({ project }: SmallProjectCardProps) => {
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
   // Group images in pairs for side-by-side display
   const createImagePairs = (images: string[]) => {
     const pairs = [];
@@ -33,62 +41,121 @@ const SmallProjectCard = ({ project }: SmallProjectCardProps) => {
 
   const imagePairs = createImagePairs(project.images);
 
+  const handleImageClick = (pairIndex: number, imageIndex: number) => {
+    const actualImageIndex = pairIndex * 2 + imageIndex;
+    setSelectedImageIndex(actualImageIndex);
+    setIsLightboxOpen(true);
+  };
+
+  const goToNextImage = () => {
+    setSelectedImageIndex((prev) => (prev + 1) % project.images.length);
+  };
+
+  const goToPrevImage = () => {
+    setSelectedImageIndex((prev) => (prev - 1 + project.images.length) % project.images.length);
+  };
+
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-      {project.images.length > 0 ? (
-        <div className="relative">
-          <Carousel className="w-full">
-            <CarouselContent>
-              {imagePairs.map((pair, pairIndex) => (
-                <CarouselItem key={pairIndex} className="basis-full">
-                  <div className="flex gap-1">
-                    {pair.map((image, imageIndex) => (
-                      <div key={`${pairIndex}-${imageIndex}`} className="flex-1">
-                        <AspectRatio ratio={16 / 9}>
-                          <img 
-                            src={image} 
-                            alt={`${project.title} - image ${pairIndex * 2 + imageIndex + 1}`} 
-                            className="object-cover w-full h-full"
-                          />
-                        </AspectRatio>
-                      </div>
-                    ))}
-                    {/* If we have a single image in the pair, add an empty div to maintain layout */}
-                    {pair.length === 1 && (
-                      <div className="flex-1">
-                        <AspectRatio ratio={16 / 9}>
-                          <div className="bg-gray-100 w-full h-full"></div>
-                        </AspectRatio>
-                      </div>
-                    )}
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
+    <>
+      <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+        {project.images.length > 0 ? (
+          <div className="relative">
+            <Carousel className="w-full">
+              <CarouselContent>
+                {imagePairs.map((pair, pairIndex) => (
+                  <CarouselItem key={pairIndex} className="basis-full">
+                    <div className="flex gap-1">
+                      {pair.map((image, imageIndex) => (
+                        <div key={`${pairIndex}-${imageIndex}`} className="flex-1">
+                          <AspectRatio ratio={16 / 9}>
+                            <img 
+                              src={image} 
+                              alt={`${project.title} - image ${pairIndex * 2 + imageIndex + 1}`} 
+                              className="object-cover w-full h-full cursor-pointer hover:opacity-90 transition-opacity"
+                              onClick={() => handleImageClick(pairIndex, imageIndex)}
+                            />
+                          </AspectRatio>
+                        </div>
+                      ))}
+                      {/* If we have a single image in the pair, add an empty div to maintain layout */}
+                      {pair.length === 1 && (
+                        <div className="flex-1">
+                          <AspectRatio ratio={16 / 9}>
+                            <div className="bg-gray-100 w-full h-full"></div>
+                          </AspectRatio>
+                        </div>
+                      )}
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              
+              {/* Always show navigation arrows when there are images */}
+              {project.images.length > 0 && (
+                <>
+                  <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-10" />
+                  <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10" />
+                </>
+              )}
+            </Carousel>
+          </div>
+        ) : (
+          <AspectRatio ratio={16 / 9}>
+            <div className="bg-gray-100 w-full h-full"></div>
+          </AspectRatio>
+        )}
+        
+        <CardHeader className="pb-2">
+          <CardTitle className="text-xl text-inplast-blue">{project.title}</CardTitle>
+        </CardHeader>
+        
+        <CardContent>
+          <p className="text-gray-700">{project.description}</p>
+        </CardContent>
+      </Card>
+
+      {/* Lightbox Dialog */}
+      <Dialog open={isLightboxOpen} onOpenChange={setIsLightboxOpen}>
+        <DialogContent className="max-w-[95vw] max-h-[95vh] w-auto h-auto p-0 bg-black border-0">
+          <div className="relative w-full h-full flex items-center justify-center">
+            <img
+              src={project.images[selectedImageIndex]}
+              alt={`${project.title} - image ${selectedImageIndex + 1}`}
+              className="max-w-full max-h-[95vh] object-contain"
+            />
             
-            {/* Always show navigation arrows when there are images */}
-            {project.images.length > 0 && (
+            {/* Navigation arrows for lightbox */}
+            {project.images.length > 1 && (
               <>
-                <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-10" />
-                <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10" />
+                <button
+                  onClick={goToPrevImage}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition-all z-10"
+                  aria-label="Previous image"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button
+                  onClick={goToNextImage}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition-all z-10"
+                  aria-label="Next image"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
               </>
             )}
-          </Carousel>
-        </div>
-      ) : (
-        <AspectRatio ratio={16 / 9}>
-          <div className="bg-gray-100 w-full h-full"></div>
-        </AspectRatio>
-      )}
-      
-      <CardHeader className="pb-2">
-        <CardTitle className="text-xl text-inplast-blue">{project.title}</CardTitle>
-      </CardHeader>
-      
-      <CardContent>
-        <p className="text-gray-700">{project.description}</p>
-      </CardContent>
-    </Card>
+            
+            {/* Image counter */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+              {selectedImageIndex + 1} / {project.images.length}
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 };
 
