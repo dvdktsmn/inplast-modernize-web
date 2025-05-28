@@ -430,7 +430,7 @@ const LargeProjectCard = ({ project, reverseLayout = false }: LargeProjectCardPr
 
       {/* Full-screen Image Lightbox */}
       <Dialog open={lightboxOpen} onOpenChange={setLightboxOpen}>
-        <DialogContent className="max-w-[95vw] w-[95vw] max-h-[95vh] h-[95vh] p-0 bg-white border-none">
+        <DialogContent className="max-w-[90vw] w-[90vw] max-h-[90vh] h-[90vh] p-2 bg-white border-none">
           <div className="relative w-full h-full flex items-center justify-center">
             <Button 
               variant="outline" 
@@ -441,15 +441,15 @@ const LargeProjectCard = ({ project, reverseLayout = false }: LargeProjectCardPr
               <X className="h-6 w-6" />
             </Button>
             
-            <Carousel className="w-full h-full" setApi={setCarouselApi} opts={{ loop: true }}>
-              <CarouselContent className="h-full">
+            <Carousel className="w-full max-h-full" setApi={setCarouselApi} opts={{ loop: true }}>
+              <CarouselContent className="max-h-full">
                 {project.images.map((image, index) => (
-                  <CarouselItem key={`lightbox-${index}`} className="h-full flex items-center justify-center">
-                    <div className="relative w-full h-full flex items-center justify-center p-4">
+                  <CarouselItem key={`lightbox-${index}`} className="flex items-center justify-center">
+                    <div className="relative w-full h-full flex items-center justify-center p-8">
                       <img 
                         src={image} 
                         alt={`${project.title} - large view ${index + 1}`}
-                        className="max-h-full max-w-full object-contain"
+                        className="max-w-full max-h-[75vh] object-contain rounded-lg shadow-lg"
                       />
                     </div>
                   </CarouselItem>
