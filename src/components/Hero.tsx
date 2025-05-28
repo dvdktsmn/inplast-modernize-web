@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 
@@ -23,7 +24,7 @@ const Hero = () => {
       
       <div className="relative z-10 flex flex-col justify-center items-center h-full container mx-auto text-center px-4 py-8">
         <img 
-          src="/lovable-uploads/99a847fd-71f3-4e06-a241-fb9739d1979b.png" 
+          src="/lovable-uploads/ed27593e-b69f-4a83-b4c1-b98eed195b36.png" 
           alt="Inplast Novex Logo" 
           className="h-16 md:h-20 mb-6 animate-fade-in" 
         />

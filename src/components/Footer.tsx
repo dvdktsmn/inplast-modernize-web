@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -11,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <img 
-              src="/lovable-uploads/99a847fd-71f3-4e06-a241-fb9739d1979b.png"
+              src="/lovable-uploads/ed27593e-b69f-4a83-b4c1-b98eed195b36.png"
               alt="Inplast Novex Logo" 
               className="h-12 mb-4"
             />
