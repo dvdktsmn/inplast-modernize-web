@@ -55,7 +55,7 @@ const ContactPage = () => {
 
       await emailjs.send(
         'service_8mjcvn8', // You'll need to replace with your EmailJS service ID
-        'template_zby8cjo', // You'll need to replace with your EmailJS template ID
+        'template_4tid1x5', // You'll need to replace with your EmailJS template ID
         templateParams,
         'XGQj7vpCRTP4TlGX7' // You'll need to replace with your EmailJS public key
       );
