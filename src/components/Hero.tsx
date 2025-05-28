@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 
@@ -15,7 +16,7 @@ const Hero = () => {
   };
   
   return (
-    <div className="relative h-[50vh] overflow-hidden">
+    <div className="relative h-[70vh] md:h-[50vh] overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
         style={{
@@ -26,7 +27,7 @@ const Hero = () => {
       
       <div className="relative z-10 flex flex-col justify-center items-center h-full container mx-auto text-center px-4 py-8">
         <img 
-          src="/lovable-uploads/ed27593e-b69f-4a83-b4c1-b98eed195b36.png" 
+          src="/lovable-uploads/cc68e7e0-36f2-4c1b-8fa7-b080687470d6.png" 
           alt="Inplast Novex Logo" 
           className="h-16 md:h-20 mb-6 animate-fade-in" 
         />
