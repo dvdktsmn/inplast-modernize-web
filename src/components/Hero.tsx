@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 
@@ -6,7 +5,10 @@ const Hero = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({
+      const navbarHeight = 64; // Approximate height of the navbar (h-16 = 64px)
+      const elementPosition = element.offsetTop - navbarHeight;
+      window.scrollTo({
+        top: elementPosition,
         behavior: 'smooth'
       });
     }
@@ -24,7 +26,7 @@ const Hero = () => {
       
       <div className="relative z-10 flex flex-col justify-center items-center h-full container mx-auto text-center px-4 py-8">
         <img 
-          src="/lovable-uploads/ed27593e-b69f-4a83-b4c1-b98eed195b36.png" 
+          src="/lovable-uploads/8fd07dbd-1204-4fec-9445-4284a95e1f5e.png" 
           alt="Inplast Novex Logo" 
           className="h-16 md:h-20 mb-6 animate-fade-in" 
         />

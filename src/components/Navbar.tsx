@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from 'react-router-dom';
@@ -17,7 +16,12 @@ const Navbar = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const navbarHeight = 64; // Approximate height of the navbar (h-16 = 64px)
+      const elementPosition = element.offsetTop - navbarHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
   };
   
@@ -33,7 +37,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <Link to="/">
             <img 
-              src="/lovable-uploads/ed27593e-b69f-4a83-b4c1-b98eed195b36.png" 
+              src="/lovable-uploads/8fd07dbd-1204-4fec-9445-4284a95e1f5e.png" 
               alt="Inplast Novex Logo" 
               className="h-12 mr-3"
             />
