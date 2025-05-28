@@ -26,7 +26,7 @@ const Hero = () => {
       
       <div className="relative z-10 flex flex-col justify-center items-center h-full container mx-auto text-center px-4 py-8">
         <img 
-          src="/lovable-uploads/8fd07dbd-1204-4fec-9445-4284a95e1f5e.png" 
+          src="/lovable-uploads/ed27593e-b69f-4a83-b4c1-b98eed195b36.png" 
           alt="Inplast Novex Logo" 
           className="h-16 md:h-20 mb-6 animate-fade-in" 
         />

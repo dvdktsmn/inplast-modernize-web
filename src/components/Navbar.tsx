@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <Link to="/">
             <img 
-              src="/lovable-uploads/8fd07dbd-1204-4fec-9445-4284a95e1f5e.png" 
+              src="/lovable-uploads/ed27593e-b69f-4a83-b4c1-b98eed195b36.png" 
               alt="Inplast Novex Logo" 
               className="h-12 mr-3"
             />
