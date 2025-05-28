@@ -34,17 +34,17 @@ const SmallProjectCard = ({ project }: SmallProjectCardProps) => {
   const imagePairs = createImagePairs(project.images);
 
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow h-96">
+    <Card className="overflow-hidden hover:shadow-lg transition-shadow">
       {project.images.length > 0 ? (
-        <div className="relative h-64">
-          <Carousel className="w-full h-full">
-            <CarouselContent className="h-full">
+        <div className="relative">
+          <Carousel className="w-full">
+            <CarouselContent>
               {imagePairs.map((pair, pairIndex) => (
-                <CarouselItem key={pairIndex} className="basis-full h-full">
-                  <div className="flex gap-1 h-full">
+                <CarouselItem key={pairIndex} className="basis-full">
+                  <div className="flex gap-1">
                     {pair.map((image, imageIndex) => (
                       <div key={`${pairIndex}-${imageIndex}`} className="flex-1">
-                        <AspectRatio ratio={16 / 9} className="h-full">
+                        <AspectRatio ratio={16 / 9}>
                           <img 
                             src={image} 
                             alt={`${project.title} - image ${pairIndex * 2 + imageIndex + 1}`} 
@@ -56,7 +56,7 @@ const SmallProjectCard = ({ project }: SmallProjectCardProps) => {
                     {/* If we have a single image in the pair, add an empty div to maintain layout */}
                     {pair.length === 1 && (
                       <div className="flex-1">
-                        <AspectRatio ratio={16 / 9} className="h-full">
+                        <AspectRatio ratio={16 / 9}>
                           <div className="bg-gray-100 w-full h-full"></div>
                         </AspectRatio>
                       </div>
@@ -76,11 +76,9 @@ const SmallProjectCard = ({ project }: SmallProjectCardProps) => {
           </Carousel>
         </div>
       ) : (
-        <div className="h-64">
-          <AspectRatio ratio={16 / 9} className="h-full">
-            <div className="bg-gray-100 w-full h-full"></div>
-          </AspectRatio>
-        </div>
+        <AspectRatio ratio={16 / 9}>
+          <div className="bg-gray-100 w-full h-full"></div>
+        </AspectRatio>
       )}
       
       <CardHeader className="pb-2">
