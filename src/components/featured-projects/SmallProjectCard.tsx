@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { FeaturedProject } from './ProjectsData';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,7 +12,6 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import {
   Dialog,
   DialogContent,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 
 interface SmallProjectCardProps {
@@ -116,41 +114,33 @@ const SmallProjectCard = ({ project }: SmallProjectCardProps) => {
 
       {/* Lightbox Dialog */}
       <Dialog open={isLightboxOpen} onOpenChange={setIsLightboxOpen}>
-        <DialogContent className="max-w-[95vw] max-h-[95vh] w-auto h-auto p-0 bg-black border-0">
-          <div className="relative w-full h-full flex items-center justify-center">
-            <img
-              src={project.images[selectedImageIndex]}
-              alt={`${project.title} - image ${selectedImageIndex + 1}`}
-              className="max-w-full max-h-[95vh] object-contain"
-            />
-            
-            {/* Navigation arrows for lightbox */}
-            {project.images.length > 1 && (
-              <>
-                <button
-                  onClick={goToPrevImage}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition-all z-10"
-                  aria-label="Previous image"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-                <button
-                  onClick={goToNextImage}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition-all z-10"
-                  aria-label="Next image"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </>
-            )}
-            
-            {/* Image counter */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
-              {selectedImageIndex + 1} / {project.images.length}
+        <DialogContent className="max-w-[95vw] w-[95vw] h-[90vh] max-h-[90vh] p-0 bg-white border-none overflow-hidden">
+          <div className="relative w-full h-full flex flex-col">
+            <div className="flex-1 min-h-0">
+              <Carousel 
+                className="w-full h-full"
+                opts={{ 
+                  loop: true,
+                  startIndex: selectedImageIndex 
+                }}
+              >
+                <CarouselContent className="h-full -ml-0">
+                  {project.images.map((image, index) => (
+                    <CarouselItem key={`lightbox-${index}`} className="h-full pl-0">
+                      <div className="w-full h-full flex items-center justify-center p-2 sm:p-4">
+                        <img 
+                          src={image} 
+                          alt={`${project.title} - large view ${index + 1}`}
+                          className="max-w-full max-h-full object-contain rounded-lg shadow-lg"
+                          style={{ maxHeight: 'calc(90vh - 1rem)' }}
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-2 sm:left-4 bg-white/80 hover:bg-white border-gray-300 text-gray-700 shadow-lg" />
+                <CarouselNext className="right-2 sm:right-4 bg-white/80 hover:bg-white border-gray-300 text-gray-700 shadow-lg" />
+              </Carousel>
             </div>
           </div>
         </DialogContent>
