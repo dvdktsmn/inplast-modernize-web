@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { FeaturedProject } from './ProjectsData';
 import { 
@@ -85,12 +86,12 @@ const LargeProjectCard = ({ project, reverseLayout = false }: LargeProjectCardPr
       <div className={`${reverseLayout ? 'md:flex-row-reverse' : ''} md:flex`}>
         {/* Image Carousel - 50% width on desktop, full width on mobile */}
         <div className="md:w-1/2">
-          <Carousel className="w-full h-full">
+          <Carousel className="w-full">
             <CarouselContent>
               {project.images.map((image, index) => (
                 <CarouselItem key={index}>
-                  <div className="relative h-64 md:h-96 w-full">
-                    <AspectRatio ratio={16 / 9} className="h-full">
+                  <div className="relative w-full">
+                    <AspectRatio ratio={16 / 9}>
                       <img 
                         src={image} 
                         alt={`${project.title} - image ${index + 1}`}
@@ -107,7 +108,7 @@ const LargeProjectCard = ({ project, reverseLayout = false }: LargeProjectCardPr
         </div>
         
         {/* Project details - 50% width on desktop, full width on mobile */}
-        <div className="p-6 md:p-8 md:w-1/2">
+        <div className="p-6 md:p-8 md:w-1/2 flex flex-col">
           <div className="mb-4">
             <h3 className="text-3xl font-bold text-inplast-blue">{project.title}</h3>
           </div>
@@ -116,7 +117,7 @@ const LargeProjectCard = ({ project, reverseLayout = false }: LargeProjectCardPr
             <span className="text-gray-600 font-medium">{project.location}</span>
           </div>
           
-          <p className="text-gray-700 mb-6 leading-relaxed">{project.description}</p>
+          <p className="text-gray-700 leading-relaxed flex-grow">{project.description}</p>
         </div>
       </div>
 
