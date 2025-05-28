@@ -446,7 +446,7 @@ const LargeProjectCard = ({ project, reverseLayout = false }: LargeProjectCardPr
                       <div className="w-full h-full flex items-center justify-center p-4">
                         <img 
                           src={image} 
-                          alt={`${project.title} - крупный вид ${index + 1}`}
+                          alt={`${project.title} - large view ${index + 1}`}
                           className="max-w-full max-h-full object-contain rounded-lg shadow-lg"
                           style={{ maxHeight: 'calc(90vh - 2rem)' }}
                         />
