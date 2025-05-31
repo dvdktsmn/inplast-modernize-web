@@ -51,8 +51,7 @@ const Contact = ({ isStandalone = false }: ContactProps) => {
         from_name: name,
         from_email: email,
         telephone: telephone || 'Not provided',
-        message: message,
-        to_email: 'dvdktsmn@gmail.com'
+        message: message
       };
 
       await emailjs.send(
