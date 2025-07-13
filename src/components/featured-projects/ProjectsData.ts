@@ -1,4 +1,3 @@
-
 export interface FeaturedProject {
   id: string;
   title: string;
@@ -43,8 +42,7 @@ export const featuredProjectsData: FeaturedProject[] = [
       "/lovable-uploads/f0d79ea5-1ec0-4fa1-a72a-8cac6dd293c8.png",
       "/lovable-uploads/374392c1-66d1-4c15-a8cc-017e405f2547.png",
       "/lovable-uploads/54648c53-c95b-41d6-94a0-a737d55b8f6b.png",
-      
-      
+      "/lovable-uploads/c07aec48-dbd6-4856-ab27-5de03273a9a3.png"
     ],
     isLarge: true,
     tags: ["Equipment Relocation", "Production Line", "Cross-Continental"]
