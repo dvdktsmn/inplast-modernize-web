@@ -36,13 +36,13 @@ export const featuredProjectsData: FeaturedProject[] = [
       "/lovable-uploads/650e8d7b-abac-4081-b625-0dbc92db7f3b.png",
       "/lovable-uploads/5a1295fa-e1a2-4fa7-9040-af2ae43ef2f4.png",
       "/lovable-uploads/bc1579f4-de79-45ae-a4c4-ec4693e5c62a.png", 
-      
       "/lovable-uploads/0edc4beb-8484-4ee5-8225-1d22abd35d55.png",
       "/lovable-uploads/6864dcf5-bd5d-4ad8-b67c-35a2ef6b4492.png",
       "/lovable-uploads/f0d79ea5-1ec0-4fa1-a72a-8cac6dd293c8.png",
       "/lovable-uploads/374392c1-66d1-4c15-a8cc-017e405f2547.png",
       "/lovable-uploads/54648c53-c95b-41d6-94a0-a737d55b8f6b.png",
-      "/lovable-uploads/c07aec48-dbd6-4856-ab27-5de03273a9a3.png"
+      "/lovable-uploads/c07aec48-dbd6-4856-ab27-5de03273a9a3.png",
+      "/lovable-uploads/ba7332e6-4611-4138-aae1-10ad5bbc8938.png"
     ],
     isLarge: true,
     tags: ["Equipment Relocation", "Production Line", "Cross-Continental"]
@@ -146,7 +146,6 @@ export const featuredProjectsData: FeaturedProject[] = [
       "/lovable-uploads/7672fa9d-9288-4cd0-b2a6-6793922d48c4.png",
       "/lovable-uploads/91406cc8-6669-4afa-aac9-4fbf1b7db70b.png",
       "/lovable-uploads/36c75e94-7202-41f1-89fd-6cca618a42e0.png"
-      
     ],
     isLarge: false
   }
