@@ -14,7 +14,7 @@ export const projectsData: Project[] = [
     title: "BOPP Line Relocation",
     location: "From China to Europe",
     image: "/lovable-uploads/4c257c37-8c64-4c31-bcea-916d3639fd25.png",
-    description: "Complete disassembly, transportation, refurbishment and reinstallation of a large-scale BOPP production line across continents.",
+    description: "Complete disassembly, transportation, refurbishment and reinstallation of a large-scale MHI BOPP production line across continents.",
     galleryImages: [
       "/lovable-uploads/1578a116-7962-49ae-a3ad-3f09928ab06b.png",
       "/lovable-uploads/91e587fb-4c00-46b1-80d1-bd90c401bc95.png",
