@@ -30,7 +30,7 @@ export const featuredProjectsData: FeaturedProject[] = [
       "/lovable-uploads/77ca2960-f976-4a79-8837-d1722aba2bce.png",
       "/lovable-uploads/0a01b4c1-195e-462f-ae34-976a43e2c5ab.png",
       "/lovable-uploads/e0de7c2b-622d-4eb7-8caf-74469d4e733b.png",
-      
+      "/lovable-uploads/e41d37fe-a111-4f09-9d3f-81b90123a72a.png",
       "/lovable-uploads/7b6b6ab0-8a79-44ea-aaca-5edd3ad5e243.png",
       "/lovable-uploads/d51699ee-1192-4907-a479-037e66693776.png",
       "/lovable-uploads/f5df3110-e434-4145-9c71-2a4e62ecc6ad.png",
