@@ -21,7 +21,10 @@ export const projectsData: Project[] = [
       "/lovable-uploads/77ca2960-f976-4a79-8837-d1722aba2bce.png",
       "/lovable-uploads/0a01b4c1-195e-462f-ae34-976a43e2c5ab.png",
       "/lovable-uploads/e0de7c2b-622d-4eb7-8caf-74469d4e733b.png",
+      "/lovable-uploads/e36799dd-059e-4bc0-bca0-9bd4f837bd9b.png",
+      "/lovable-uploads/54648c53-c95b-41d6-94a0-a737d55b8f6b.png",
       "/lovable-uploads/93958ee0-2942-4295-aaec-7d8baadc4203.png",
+      "/lovable-uploads/374392c1-66d1-4c15-a8cc-017e405f2547.png",
       "/lovable-uploads/7b6b6ab0-8a79-44ea-aaca-5edd3ad5e243.png",
       "/lovable-uploads/d51699ee-1192-4907-a479-037e66693776.png",
       "/lovable-uploads/f5df3110-e434-4145-9c71-2a4e62ecc6ad.png",
@@ -32,9 +35,9 @@ export const projectsData: Project[] = [
       "/lovable-uploads/0edc4beb-8484-4ee5-8225-1d22abd35d55.png",
       "/lovable-uploads/6864dcf5-bd5d-4ad8-b67c-35a2ef6b4492.png",
       "/lovable-uploads/f0d79ea5-1ec0-4fa1-a72a-8cac6dd293c8.png",
-      "/lovable-uploads/374392c1-66d1-4c15-a8cc-017e405f2547.png",
-      "/lovable-uploads/54648c53-c95b-41d6-94a0-a737d55b8f6b.png",
-      "/lovable-uploads/e36799dd-059e-4bc0-bca0-9bd4f837bd9b.png",]
+      
+      
+      ]
   }, 
   {
     title: "Factory Modernization",
