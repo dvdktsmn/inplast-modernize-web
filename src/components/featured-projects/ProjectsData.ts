@@ -43,7 +43,12 @@ export const featuredProjectsData: FeaturedProject[] = [
       "/lovable-uploads/6864dcf5-bd5d-4ad8-b67c-35a2ef6b4492.png",
       "/lovable-uploads/f0d79ea5-1ec0-4fa1-a72a-8cac6dd293c8.png",
       "/lovable-uploads/374392c1-66d1-4c15-a8cc-017e405f2547.png",
-      "/lovable-uploads/54648c53-c95b-41d6-94a0-a737d55b8f6b.png"
+      "/lovable-uploads/54648c53-c95b-41d6-94a0-a737d55b8f6b.png",
+      "/lovable-uploads/2fc7d11c-4797-4699-9455-3e99b47e44c6.png",
+      "/lovable-uploads/974bbbc1-5918-47eb-82d2-a6c1a6fb18af.png",
+      "/lovable-uploads/0d44bd28-a4bf-439c-ba78-6c6b3e46b96e.png",
+      "/lovable-uploads/98be91ea-d3de-4298-9912-869577a30c7e.png",
+      "/lovable-uploads/74ff5bd9-65a9-42ea-ad47-2304c2a8e258.png"
       
       
       
