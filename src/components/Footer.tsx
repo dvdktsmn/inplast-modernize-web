@@ -40,14 +40,14 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Group Companies</h4>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-white hover:text-inplast-orange transition-colors">Inplast Novex</a></li>
-              <li><a href="https://visopack.pl" target="_blank" rel="noopener noreferrer" className="text-white hover:text-inplast-orange transition-colors">Visopack</a></li>
-              <li><a href="https://moplefan-group.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-inplast-orange transition-colors">Moplefan</a></li>
-            </ul>
-          </div>
+          //<div>
+            //<h4 className="text-lg font-semibold text-white mb-4">Group Companies</h4>
+            //<ul className="space-y-2">
+             // <li><a href="#" className="text-white hover:text-inplast-orange transition-colors">Inplast Novex</a></li>
+              //<li><a href="https://visopack.pl" target="_blank" rel="noopener noreferrer" className="text-white hover:text-inplast-orange transition-colors">Visopack</a></li>
+              //<li><a href="https://moplefan-group.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-inplast-orange transition-colors">Moplefan</a></li>
+            //</ul>
+          //</div>
         </div>
         
         <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
