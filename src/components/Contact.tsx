@@ -170,7 +170,7 @@ const Contact = ({ isStandalone = false }: ContactProps) => {
                 <p className="text-gray-600">
                   Email: info@inplast-novex.com<br />
                   Phone: +48 538 421 002<br />
-                  +43 676 650 75 75
+                  <span className="ml-[3.5rem]">+43 676 650 75 75</span>
                 </p>
               </div>
             </div>
