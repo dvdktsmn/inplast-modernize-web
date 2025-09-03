@@ -157,17 +157,23 @@ const ContactPage = () => {
                 <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                   <h4 className="text-xl font-semibold text-inplast-blue mb-2">Headquarters</h4>
                   <p className="text-gray-600">
-                    87b M.Sklodowskiej-Curie Street<br />
-                    87-100 Torun, Poland
-                  </p>
-                </div>
-                
-                <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-                  <h4 className="text-xl font-semibold text-inplast-blue mb-2">Contact Info</h4>
-                  <p className="text-gray-600">
-                    Email: info@inplast-novex.com<br />
-                    Phone: +48 538 421 002
-                  </p>
+                    Marii Sklodowskiej-Curie 87B<br />
+                  87-100 Torun, Poland
+                </p>
+                <p className="text-gray-600">
+                  <br />
+                  Leitweg 4a<br />
+                  6345 Koessen, Austria
+                </p>
+              </div>
+              
+              <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+                <h4 className="text-xl font-semibold text-inplast-blue mb-2">Contact Info</h4>
+                <p className="text-gray-600">
+                  Email: info@inplast-novex.com<br />
+                  Phone: +48 538 421 002<br />
+                  <span className="ml-[3.75rem]">+43 676 650 75 75</span>
+                </p>
                 </div>
               </div>
             </div>
