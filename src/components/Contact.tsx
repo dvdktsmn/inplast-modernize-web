@@ -160,6 +160,7 @@ const Contact = ({ isStandalone = false }: ContactProps) => {
                   87-100 Torun, Poland
                 </p>
                 <p className="text-gray-600">
+                  <br />
                   4a Leitweg Street<br />
                   6345 Koessen, Austria
                 </p>
