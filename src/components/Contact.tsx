@@ -154,7 +154,7 @@ const Contact = ({ isStandalone = false }: ContactProps) => {
             
             <div className="flex flex-col gap-6">
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-                <h4 className="text-xl font-semibold text-inplast-blue mb-2">Headquarters</h4>
+                <h4 className="text-xl font-semibold text-inplast-blue mb-2">Address</h4>
                 <p className="text-gray-600">
                   Marii Sklodowskiej-Curie 87B<br />
                   87-100 Torun, Poland
