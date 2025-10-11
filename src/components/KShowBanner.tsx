@@ -10,7 +10,7 @@ const KShowBanner = () => {
         className="w-full h-full object-cover"
       />
       <div className="absolute inset-0 flex items-center justify-end pr-8 md:pr-16">
-        <p className="text-white text-lg md:text-2xl font-bold drop-shadow-lg align-right">
+        <p className="text-white text-lg md:text-2xl font-bold drop-shadow-lg">
           Meet us at the K-Show: <br />
           Hall 3, Stand G 80
         </p>
