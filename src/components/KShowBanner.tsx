@@ -5,7 +5,7 @@ const KShowBanner = () => {
     <section className="relative w-full">
       <div className="container mx-auto px-4">
         <div className="relative">
-          <img src="/lovable-uploads/k-show-banner.png" alt="K-Show 2025 Banner" className="w-auto h-30 block" />
+          <img src="/lovable-uploads/k-show-banner.png" alt="K-Show 2025 Banner" className="w-full h-30 block" />
           <div className="absolute inset-0 flex items-center justify-end">
             <div className="w-1/2 text-center px-8">
               <p className="text-xl md:text-3xl lg:text-4xl font-bold text-white">
