@@ -3,7 +3,7 @@ import kShowImage from "@/assets/k-show-banner.png";
 
 const KShowBanner = () => {
   return (
-    <section className="relative w-full h-28 md:h-40 overflow-hidden mt-16">
+    <section className="relative w-full h-20 md:h-30 overflow-hidden mt-16">
       <img
         src={kShowImage}
         alt="K-Show 2025 - The World's No.1 Trade Fair for Plastics and Rubber"
