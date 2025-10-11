@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
 
 const KShowBanner = () => {
   return (
-    <section className="bg-white border-b">
-      <div className="container mx-auto px-4 py-6">
-        <div className="flex items-center justify-between gap-8">
-          <div className="flex-shrink-0">
-            <img 
-              src="/lovable-uploads/k-show-banner.png" 
-              alt="K-Show 2025 - The World's No. 1 Trade Fair for Plastics and Rubber" 
-              className="h-20 w-auto"
-            />
-          </div>
-          <div className="text-xl font-semibold text-inplast-blue">
-            Meet us at the K-Show: Hall 3, Stand G 80
+    <section className="relative w-full">
+      <div className="container mx-auto px-4">
+        <div className="relative">
+          <img src="/lovable-uploads/k-show-banner.png" alt="K-Show 2025 Banner" className="w-auto h-12 block" />
+          <div className="absolute inset-0 flex items-center justify-end">
+            <div className="w-1/2 text-center px-8">
+              <p className="text-xl md:text-3xl lg:text-4xl font-bold text-white">
+                Meet us at the K-Show:
+                <br />
+                Hall 3, Stand G 80
+              </p>
+            </div>
           </div>
         </div>
       </div>

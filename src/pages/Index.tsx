@@ -14,8 +14,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <KShowBanner />
       <div className="pt-16">
+        <KShowBanner />
         <Hero />
         <About />
         <Products />
