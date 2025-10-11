@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Navbar from '../components/Navbar';
+import KShowBanner from '../components/KShowBanner';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Products from '../components/Products';
@@ -14,6 +15,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <div className="pt-16">
+        <KShowBanner />
         <Hero />
         <About />
         <Products />
