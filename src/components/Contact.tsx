@@ -15,7 +15,6 @@ const Contact = ({ isStandalone = false }: ContactProps) => {
   const [email, setEmail] = useState("");
   const [telephone, setTelephone] = useState("");
   const [message, setMessage] = useState("");
-  const [website, setWebsite] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
@@ -71,7 +70,6 @@ const Contact = ({ isStandalone = false }: ContactProps) => {
       setEmail("");
       setTelephone("");
       setMessage("");
-      setWebsite("");
     } catch (error) {
       console.error("Email sending failed:", error);
       toast({
@@ -116,16 +114,7 @@ const Contact = ({ isStandalone = false }: ContactProps) => {
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
-                <div className="space-y-2 h-0 w-0">
-                  <Label htmlFor="website">Website</Label>
-                  <Input
-                    id="website"
-                    type="web"
-                    placeholder="www.website.com"
-                    value={website}
-                    onChange={(e) => setWebsite(e.target.value)}
-                  />
-                </div>
+
                 <div className="space-y-2">
                   <Label htmlFor="telephone">Telephone</Label>
                   <Input
