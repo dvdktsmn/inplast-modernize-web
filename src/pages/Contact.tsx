@@ -13,11 +13,18 @@ const ContactPage = () => {
   const [email, setEmail] = useState("");
   const [telephone, setTelephone] = useState("");
   const [message, setMessage] = useState("");
+  const [website, setWebsite] = useState(""); // Honeypot field
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Honeypot check - if filled, it's a bot
+    if (website.trim() !== "") {
+      console.log("Bot detected - honeypot field filled");
+      return;
+    }
 
     // Basic validation
     if (!name.trim() || !email.trim() || !message.trim()) {
@@ -68,6 +75,7 @@ const ContactPage = () => {
       setEmail("");
       setTelephone("");
       setMessage("");
+      setWebsite("");
     } catch (error) {
       console.error("Email sending failed:", error);
       toast({
@@ -124,6 +132,19 @@ const ContactPage = () => {
                       placeholder="+0 123 456 789"
                       value={telephone}
                       onChange={(e) => setTelephone(e.target.value)}
+                    />
+                  </div>
+
+                  {/* Honeypot field - hidden from users */}
+                  <div className="absolute opacity-0 pointer-events-none" aria-hidden="true">
+                    <Label htmlFor="website">Website</Label>
+                    <Input
+                      id="website"
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={website}
+                      onChange={(e) => setWebsite(e.target.value)}
                     />
                   </div>
 
