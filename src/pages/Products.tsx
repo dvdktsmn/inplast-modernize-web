@@ -15,13 +15,13 @@ interface ProductDetail {
 const ProductsPage = () => {
   // Updated image paths to use the new uploaded images
   const productImages = {
-    "Biax Lines": "/lovable-uploads/14e9bd31-4fd9-4558-9a4b-731f44fce6e2.png",
-    "Extrusion Systems": "/lovable-uploads/3ff7b214-9963-4cd2-96d0-b11838885c28.png",
-    "Converting Equipment": "/lovable-uploads/de929fe4-b5a4-4a48-8301-454cbd7bea35.png",
-    "Electrical Components and Systems": "/lovable-uploads/371c6472-159f-41b3-a97b-4abeff5ccde6.png",
-    "Motion Control": "/lovable-uploads/87f7cb49-1a26-4ce0-82e7-5819631a0cd1.png",
-    "Automation and Process Control": "/lovable-uploads/d946c718-e590-4932-9e9a-45e34a43ae11.png",
-    "MES Systems": "/lovable-uploads/6e0bc48d-de47-4a31-abfc-0c1b018528a6.png",
+    "Biax Lines": "/lovable-uploads/14e9bd31-4fd9-4558-9a4b-731f44fce6e2.webp",
+    "Extrusion Systems": "/lovable-uploads/3ff7b214-9963-4cd2-96d0-b11838885c28.webp",
+    "Converting Equipment": "/lovable-uploads/de929fe4-b5a4-4a48-8301-454cbd7bea35.webp",
+    "Electrical Components and Systems": "/lovable-uploads/371c6472-159f-41b3-a97b-4abeff5ccde6.webp",
+    "Motion Control": "/lovable-uploads/87f7cb49-1a26-4ce0-82e7-5819631a0cd1.webp",
+    "Automation and Process Control": "/lovable-uploads/d946c718-e590-4932-9e9a-45e34a43ae11.webp",
+    "MES Systems": "/lovable-uploads/6e0bc48d-de47-4a31-abfc-0c1b018528a6.webp",
   };
 
   const products: ProductDetail[] = [
