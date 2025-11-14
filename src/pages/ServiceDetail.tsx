@@ -1,6 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { serviceDetails } from '../components/services/ServiceData';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -84,8 +85,62 @@ const ServiceDetail = () => {
     );
   };
 
+  // Create structured data for the service
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": serviceDetail.title,
+    "provider": {
+      "@type": "Organization",
+      "name": "Inplast Novex",
+      "url": "https://inplast-novex.com"
+    },
+    "description": serviceDetail.description,
+    "areaServed": "Global",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://inplast-novex.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://inplast-novex.com/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": serviceDetail.title,
+        "item": `https://inplast-novex.com/services/${serviceId}`
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>{serviceDetail.title} - Inplast Novex</title>
+        <meta name="description" content={serviceDetail.description} />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbData)}
+        </script>
+      </Helmet>
+      
       <Navbar />
       
       {/* Added pt-16 to account for the fixed navbar height and some extra space */}
