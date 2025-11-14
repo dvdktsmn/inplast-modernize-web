@@ -80,6 +80,7 @@ const ServiceCarousel = ({ images }: ServiceCarouselProps) => {
                     src={image}
                     alt={`Service image ${index + 1}`}
                     className="object-cover w-full h-full rounded-xl"
+                    loading="lazy"
                   />
                 </div>
               </Card>

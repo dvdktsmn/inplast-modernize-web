@@ -45,6 +45,7 @@ const ProductCarousel = () => {
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  loading="lazy"
                 />
               </div>
               <CardContent className="p-4 text-center bg-white">
@@ -65,6 +66,7 @@ const ProductCarousel = () => {
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  loading="lazy"
                 />
               </div>
               <CardContent className="p-4 text-center bg-white">
