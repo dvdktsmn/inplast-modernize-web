@@ -1,5 +1,5 @@
 import React from "react";
-import kShowImage from "@/assets/k-show-banner.png";
+import kShowImage from "@/assets/k-show-banner.webp";
 
 const KShowBanner = () => {
   return (
