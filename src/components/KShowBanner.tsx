@@ -10,7 +10,6 @@ const KShowBanner = () => {
             src={kShowImage}
             alt="K-Show 2025 - The World's No.1 Trade Fair for Plastics and Rubber"
             className="w-full md:w-auto md:h-full object-cover"
-            loading="lazy"
           />
           <div className="absolute inset-0 flex items-center justify-end px-4 md:px-0">
             <p className="text-white text-sm md:text-2xl font-bold drop-shadow-lg text-right">
