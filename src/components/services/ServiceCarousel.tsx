@@ -75,7 +75,7 @@ const ServiceCarousel = ({ images }: ServiceCarouselProps) => {
           <CarouselItem key={index}>
             <div className="p-1">
               <Card className="overflow-hidden border-0 shadow-lg rounded-xl">
-                <div className="aspect-square relative max-w-[400px] max-h-[400px] mx-auto">
+                <div className="aspect-[16/9] relative">
                   <img
                     src={image}
                     alt={`Service image ${index + 1}`}
